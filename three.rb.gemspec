@@ -1,11 +1,9 @@
-# coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'three.rb/version'
+# -*- encoding: utf-8 -*-
+require File.expand_path('../lib/opal/three/version', __FILE__)
 
 Gem::Specification.new do |s|
   s.name          = "three.rb"
-  s.version       = ThreeRb::VERSION
+  s.version       = Opal::THREE::VERSION
   s.authors       = ["George Plymale", "Gabriel Rios", "George D. Plymale II"]
   s.email         = ["george@orbitalimpact.com"]
   s.homepage      = "https://github.com/orbitalimpact/three.rb"

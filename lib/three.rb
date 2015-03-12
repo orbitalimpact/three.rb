@@ -1,0 +1,1 @@
+require 'opal/require_core.rb'
