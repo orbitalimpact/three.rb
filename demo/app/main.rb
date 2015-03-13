@@ -10,20 +10,19 @@ camera = THREE::PerspectiveCamera.new(field_of_view: 75, aspect_ratio: aspect_ra
 
 renderer = THREE::WebGLRenderer.new
 renderer.set_size($$.innerWidth, $$.innerHeight)
-renderer.dom_element.append_to($document.body)
+$document.body << renderer.dom_element.to_n
 
-# THE FOLLOWING CODE IS A WORK-IN-PROGRESS AND WILL BE IMPLEMENTED SOON
-# ----------------------------------------------------------------------
-#geometry = THREE::BoxGeometry(1, 1, 1)
-#material = THREE::MeshBasicMaterial( color: 0x00ff00 )
-#cube     = THREE::Mesh(geometry, material)
-#scene.add(cube)
-#
-#camera.position.z = 5
-#
-#render = proc do
-#  $$.requestAnimationFrame(render)
-#  cube.rotation.x += 0.1
-#  cube.rotation.y += 0.1
-#  renderer.render(scene, camera)
-#end
+geometry = THREE::BoxGeometry.new(width: 1, height: 1, depth: 1)
+material = THREE::MeshBasicMaterial.new( color: 0x00ff00 )
+cube     = THREE::Mesh.new(geometry, material)
+scene.add(cube)
+
+camera.position.z = 5
+
+render = proc do
+  $$.requestAnimationFrame(render)
+  cube.rotation.x += 0.1
+  cube.rotation.y += 0.1
+  renderer.render(scene, camera)
+end
+render.call
