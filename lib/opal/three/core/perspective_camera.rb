@@ -8,7 +8,9 @@ module THREE
       near          = arg_hash[:near]
       far           = arg_hash[:far]
       
-      @native = `new THREE.Scene(field_of_view, aspect_ratio, near, far)`
+      @native = `new THREE.PerspectiveCamera(field_of_view, aspect_ratio, near, far)`
     end
+    
+    alias_native :position
   end
 end
