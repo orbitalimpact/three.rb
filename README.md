@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 Currently, there is only one working example of three.rb in action: the `demo` directory that is inside the main directory.
-It shows the ["Creating a scene"](http://threejs.org/docs/#Manual/Introduction/Creating_a_scene) tutorial on the three.js docs.
+It shows the Ruby version of the app from the ["Creating a scene"](http://threejs.org/docs/#Manual/Introduction/Creating_a_scene) tutorial on the three.js docs.
 To run it, simply run:
 
     $ rackup
