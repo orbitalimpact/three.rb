@@ -18,6 +18,14 @@ Or install it yourself as:
 
     $ gem install three.rb
 
+## Usage
+Currently, there is only one working example of three.rb in action: the `demo` directory that is inside the main directory.
+It shows the ["Creating a scene"](http://threejs.org/docs/#Manual/Introduction/Creating_a_scene) tutorial on the three.js docs.
+To run it, simply run:
+
+    $ rackup
+
+in the `demo` directory.
 
 ## Contributing
 
