@@ -3,9 +3,8 @@ module THREE
     include Native
     
     def initialize(arg_hash = {})
-      color = arg_hash[:color]
       
-      @native = `new THREE.MeshBasicMaterial(color)`
+      @native = `new THREE.MeshBasicMaterial(#{arg_hash.to_n})`
     end
   end
 end
